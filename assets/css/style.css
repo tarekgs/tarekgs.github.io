@@ -26,10 +26,19 @@ header .container {
     align-items: center;
 }
 
-h1 {
-    font-size: 24px;
-    color: #FF6347; /* Tomato color for the title */
+header h1 {
     margin: 0;
+    flex: 1;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+header nav a {
+    margin-left: 20px;
 }
 
 nav {
@@ -39,7 +48,6 @@ nav {
 nav a {
     color: #333;
     text-decoration: none;
-    margin-left: 20px;
     font-size: 16px;
 }
 
@@ -52,12 +60,12 @@ main {
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 80px); /* Adjust based on your header height */
+    text-align: center;
 }
 
 blockquote {
     font-size: 24px;
     line-height: 1.4;
-    text-align: center;
     max-width: 800px;
     margin: 0;
     padding: 0;
