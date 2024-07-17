@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <h1>{{ site.title }}</h1>
             <nav>
-                <a href="{{ '/' | relative_url }}">HOME</a>
-                <a href="{{ '/bacteria-bionumbers' | relative_url }}">BACTERIA BIONUMBERS</a>
-                <a href="{{ '/journal-club' | relative_url }}">JOURNAL CLUB</a>
-                <a href="{{ '/beliefs-values' | relative_url }}">BELIEFS / VALUES</a>
-                <a href="{{ '/blog' | relative_url }}">BLOG</a>
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="{{ '/blog' | relative_url }}">Blog</a>
+                <a href="{{ '/values' | relative_url }}">Values</a>
+                <a href="{{ '/enjoyments' | relative_url }}">Enjoyments</a>
+                <a href="{{ '/contact' | relative_url }}">Contact</a>
             </nav>
-        </header>
-        <main>
+        </div>
+    </header>
+    <main>
+        <div class="container">
             {{ content }}
-        </main>
-    </div>
+        </div>
+    </main>
 </body>
 </html>
