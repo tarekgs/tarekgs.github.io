@@ -74,12 +74,12 @@ main {
     margin-bottom: 10px;
 }
 
-.blog-main a {
+.blog-main h3 a {
+    color: #FF6347;
     text-decoration: none;
-    color: inherit;
 }
 
-.blog-main a:hover {
+.blog-main h3 a:hover {
     text-decoration: underline;
 }
 
