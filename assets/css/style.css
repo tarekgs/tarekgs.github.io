@@ -54,7 +54,7 @@ main {
     display: block;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: calc(100vh - 150px);
+    min-height: calc(60vh);
     text-align: left;
 }
 
@@ -72,6 +72,15 @@ main {
 
 .blog-main li {
     margin-bottom: 10px;
+}
+
+.blog-main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.blog-main a:hover {
+    text-decoration: underline;
 }
 
 blockquote {
