@@ -50,12 +50,19 @@ header nav a:hover {
     transform: translateY(-5px);
 }
 
-main {
+/* main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(60vh);
     text-align: center;
+} */
+main {
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(60vh);
+    text-align: left;
 }
 
 blockquote {
