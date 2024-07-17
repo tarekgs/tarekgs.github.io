@@ -42,17 +42,19 @@ header nav a {
     text-decoration: none;
     margin-left: 25px;
     font-size: 16px;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 header nav a:hover {
     color: #333;
+    transform: translateY(-5px);
 }
 
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* Adjust based on your header height */
+    min-height: calc(60vh);
     text-align: center;
 }
 
@@ -63,6 +65,31 @@ blockquote {
     margin: 0;
     padding: 0;
     border: none;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    animation: dropIn 0.5s forwards;
+}
+
+@keyframes dropIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 768px) {
