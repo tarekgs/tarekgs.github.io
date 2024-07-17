@@ -50,19 +50,28 @@ header nav a:hover {
     transform: translateY(-5px);
 }
 
-/* main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(60vh);
-    text-align: center;
-} */
 main {
     display: block;
     justify-content: flex-start;
     align-items: flex-start;
     min-height: calc(60vh);
     text-align: left;
+}
+
+.blog-main {
+    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.blog-main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.blog-main li {
+    margin-bottom: 10px;
 }
 
 blockquote {
