@@ -83,6 +83,24 @@ main {
     text-decoration: underline;
 }
 
+.likes-main h4 a {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+.likes-main h4 a:hover {
+    text-decoration: underline;
+}
+
+.likes-main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.likes-main li {
+    margin-bottom: 10px;
+}
+
 blockquote {
     font-size: 24px;
     line-height: 1.4;
