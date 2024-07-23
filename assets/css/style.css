@@ -135,6 +135,16 @@ blockquote {
     }
 }
 
+.site-title-link {
+    color: #FF6347;
+    text-decoration: none;
+}
+
+.site-title-link:hover {
+    text-decoration: none;
+    color: #FF6347;
+}
+
 @media (max-width: 768px) {
     header .container {
         flex-direction: column;
