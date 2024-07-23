@@ -1,0 +1,19 @@
+---
+layout: default
+title: Likes
+---
+
+<main class="likes-main">
+    <h1>Posts I Like</h1>
+    <ul>
+      {% for post in site.posts %}
+        {% if post.categories contains "likes" %}
+          <li>
+            <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+            <p><small>{{ post.date | date_to_long_string }}</small></p>
+            <p>{{ post.excerpt }}</p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+</main>
