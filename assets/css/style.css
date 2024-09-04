@@ -166,7 +166,7 @@ blockquote p {
     margin-bottom: 20px; /* Add margin to create space between paragraphs */
 }
 
-.fade-in {
+/* .fade-in {
     opacity: 0;
     animation: fadeIn 0.1s forwards;
 }
@@ -205,4 +205,4 @@ blockquote p {
 
 .fade-in:nth-of-type(9) {
     animation-delay: 0.9s;
-}
+} */
