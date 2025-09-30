@@ -94,9 +94,9 @@ export default function AnimatedHero() {
             color: "#374151"
           }}
         >
-          I'm drawn to deep tech, human systems, and the messy space between them. DC-born and SF-based, I'm a cross-country curiousity chaser.
+          I believe progress comes from questions we're <a href="https://www.reddit.com/r/Songwriting/comments/11b1vlx/john_mayer_on_songwriting/" target="_blank" rel="noopener noreferrer" style={{ color: '#1e40af', textDecoration: 'none' }}>stupid brave</a> enough to explore. Some deep, some delightfully dumb.
           <br /><br />
-          I believe progress comes from the questions we're willing to explore. If you do too, let's trade a few.
+          If you do too, come <a href="/contact" style={{ color: '#1e40af', textDecoration: 'none' }}>say hi</a>.
         </motion.p>
 
         {/* Doodle - Mobile only */}
