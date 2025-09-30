@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Lined notebook background - horizontal lines only */
+  background:
+    linear-gradient(to bottom, #ddd 1px, transparent 1px) 0 0;
+  background-size: 100% 40px;
+  background-color: #fffef7;
+}
+
+/* Red margin line */
+body::before {
+  content: '';
+  position: fixed;
+  left: 80px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e74c3c;
+  z-index: 0;
+}

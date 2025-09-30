@@ -1,0 +1,111 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const likes = await getCollection('likes');
+  return likes.map(like => ({
+    params: { slug: like.slug },
+    props: { like },
+  }));
+}
+
+const { like } = Astro.props;
+const { Content } = await like.render();
+---
+
+<BaseLayout title={`${like.data.title} - Tarek Saoud`}>
+  <article class="like-post">
+    <h1 style="font-size: 3.5rem; line-height: 80px; margin-bottom: 40px; color: #1e3a8a;">{like.data.title}</h1>
+    {like.data.description && (
+      <p class="description">{like.data.description}</p>
+    )}
+
+    <div class="content">
+      <Content />
+    </div>
+
+    <div class="back-link">
+      <a href="/likes">← Back to Likes</a>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .like-post {
+    max-width: 900px;
+  }
+
+  .description {
+    color: #6b7280;
+    font-size: 1.75rem;
+    line-height: 40px;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .content {
+    line-height: 40px;
+    font-size: 1.75rem;
+  }
+
+  .content :global(p) {
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .content :global(h2) {
+    font-size: 2.5rem;
+    line-height: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: #374151;
+  }
+
+  .content :global(h3) {
+    font-size: 2rem;
+    line-height: 40px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: #374151;
+  }
+
+  .content :global(ul) {
+    margin-bottom: 40px;
+    padding-left: 2rem;
+    list-style-position: outside;
+  }
+
+  .content :global(li) {
+    line-height: 40px;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+
+  .content :global(iframe) {
+    width: calc(100vw - 200px);
+    max-width: calc(100vw - 200px);
+    margin-left: 0;
+    border: none;
+    margin-bottom: 40px;
+    display: block;
+  }
+
+  .back-link {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 2px dashed #ccc;
+  }
+
+  .back-link a {
+    color: #1e40af;
+    text-decoration: none;
+    font-size: 1.75rem;
+    line-height: 40px;
+  }
+
+  .back-link a:hover {
+    text-decoration: underline;
+  }
+</style>

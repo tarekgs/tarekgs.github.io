@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact - Tarek Saoud">
+  <h1 style="font-size: 3.5rem; line-height: 80px; margin-bottom: 40px; color: #1e3a8a;">Contact</h1>
+
+  <div class="contact-info">
+    <p>
+      Email: <a href="mailto:heyimtarek@gmail.com" class="contact-link">heyimtarek@gmail.com</a>
+    </p>
+
+    <p>
+      Twitter/X: <a href="https://twitter.com/heyimtarek" target="_blank" rel="noopener noreferrer" class="contact-link">
+        @heyimtarek
+      </a>
+    </p>
+
+    <p>
+      LinkedIn: <a href="https://linkedin.com/in/tarekgsaoud" target="_blank" rel="noopener noreferrer" class="contact-link">
+        linkedin.com/in/tarekgsaoud
+      </a>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-info {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-info p {
+    font-size: 1.75rem;
+    line-height: 40px;
+    color: #374151;
+    margin-bottom: 40px;
+  }
+
+  .contact-link {
+    color: #1e40af;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .contact-link:hover {
+    text-decoration: underline;
+  }
+</style>

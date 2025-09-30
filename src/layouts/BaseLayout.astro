@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = "Hey I'm Tarek", description = "Personal website of Tarek Saoud" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+  </head>
+  <body class="text-gray-900" style="font-family: 'Reenie Beanie', cursive;">
+    <header class="px-8 relative z-10" style="background-color: transparent; padding-top: 40px; padding-bottom: 40px;">
+      <div class="max-w-7xl mx-auto flex justify-between items-baseline">
+        <a href="/" style="font-size: 2rem; font-weight: 400; color: #1e40af; text-decoration: none; line-height: 40px;">
+          Tarek Saoud
+        </a>
+        <nav class="flex gap-8" style="align-items: baseline;">
+          <a href="/" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Home</a>
+          <a href="/likes" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Likes</a>
+          <a href="/contact" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-8 relative z-10" style="padding-top: 40px; line-height: 40px; margin-left: 100px;">
+      <slot />
+    </main>
+  </body>
+</html>

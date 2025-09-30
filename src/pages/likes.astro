@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const likes = await getCollection('likes');
+const sortedLikes = likes.sort((a, b) => a.data.title.localeCompare(b.data.title));
+---
+
+<BaseLayout title="Likes - Tarek Saoud">
+  <h1 style="font-size: 3.5rem; line-height: 80px; margin-bottom: 40px; color: #1e3a8a;">Likes</h1>
+
+  <ul class="likes-list">
+    {sortedLikes.map((like) => (
+      <li>
+        <a href={`/likes/${like.slug}`}>
+          <h3>{like.data.title}</h3>
+          {like.data.description && <p>{like.data.description}</p>}
+        </a>
+      </li>
+    ))}
+  </ul>
+</BaseLayout>
+
+<style>
+  .likes-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0;
+    margin-top: 40px;
+  }
+
+  .likes-list li {
+    padding: 20px 0;
+    border-bottom: 2px dashed #ccc;
+  }
+
+  .likes-list li:last-child {
+    border-bottom: none;
+  }
+
+  .likes-list a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+  }
+
+  .likes-list a:hover {
+    color: #1e40af;
+  }
+
+  .likes-list h3 {
+    font-size: 2.5rem;
+    line-height: 40px;
+    color: #374151;
+    margin-bottom: 0;
+  }
+
+  .likes-list p {
+    font-size: 1.75rem;
+    line-height: 40px;
+    color: #6b7280;
+    margin: 0;
+  }
+</style>
