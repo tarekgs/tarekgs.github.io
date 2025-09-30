@@ -19,6 +19,15 @@ const { title = "Hey I'm Tarek", description = "Personal website of Tarek Saoud"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <style>
+      nav a {
+        transition: color 0.3s ease;
+      }
+      nav a:hover,
+      nav a.active {
+        color: #1e40af !important;
+      }
+    </style>
   </head>
   <body class="text-gray-900" style="font-family: 'Reenie Beanie', cursive;">
     <header class="px-8 relative z-10" style="background-color: transparent; padding-top: 40px; padding-bottom: 40px;">
@@ -27,9 +36,10 @@ const { title = "Hey I'm Tarek", description = "Personal website of Tarek Saoud"
           Tarek Saoud
         </a>
         <nav class="flex gap-8" style="align-items: baseline;">
-          <a href="/" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Home</a>
-          <a href="/likes" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Likes</a>
-          <a href="/contact" style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Contact</a>
+          <a href="/" class={Astro.url.pathname === '/' ? 'active' : ''} style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Home</a>
+          <a href="/likes/bookshelf" class={Astro.url.pathname.includes('/bookshelf') ? 'active' : ''} style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Bookshelf</a>
+          <a href="/likes/startups" class={Astro.url.pathname.includes('/startups') ? 'active' : ''} style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Startups</a>
+          <a href="/contact" class={Astro.url.pathname === '/contact' ? 'active' : ''} style="font-size: 1.75rem; color: #374151; text-decoration: none; line-height: 40px;">Contact</a>
         </nav>
       </div>
     </header>
