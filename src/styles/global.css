@@ -47,3 +47,9 @@ body::before {
   background-color: #e74c3c;
   z-index: 0;
 }
+
+@media (max-width: 768px) {
+  body::before {
+    left: 20px;
+  }
+}

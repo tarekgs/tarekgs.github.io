@@ -108,4 +108,63 @@ const { Content } = await like.render();
   .back-link a:hover {
     text-decoration: underline;
   }
+
+  @media (max-width: 768px) {
+    .like-post h1 {
+      font-size: 2rem !important;
+      line-height: 40px !important;
+      margin-bottom: 40px !important;
+    }
+
+    .description {
+      font-size: 1.25rem !important;
+      line-height: 40px !important;
+      margin-bottom: 40px !important;
+      padding-bottom: 40px !important;
+    }
+
+    .content {
+      font-size: 1.25rem !important;
+      line-height: 40px !important;
+    }
+
+    .content :global(p) {
+      line-height: 40px !important;
+      margin-bottom: 40px !important;
+    }
+
+    .content :global(h2) {
+      font-size: 1.75rem !important;
+      line-height: 40px !important;
+      margin-top: 40px !important;
+      margin-bottom: 40px !important;
+    }
+
+    .content :global(h3) {
+      font-size: 1.5rem !important;
+      line-height: 40px !important;
+      margin-top: 40px !important;
+    }
+
+    .content :global(li) {
+      font-size: 1.25rem !important;
+      line-height: 40px !important;
+    }
+
+    .content :global(iframe) {
+      width: calc(100vw - 3rem) !important;
+      max-width: calc(100vw - 3rem) !important;
+      height: 400px !important;
+    }
+
+    .back-link {
+      margin-top: 40px !important;
+      padding-top: 40px !important;
+    }
+
+    .back-link a {
+      font-size: 1.25rem !important;
+      line-height: 40px !important;
+    }
+  }
 </style>
