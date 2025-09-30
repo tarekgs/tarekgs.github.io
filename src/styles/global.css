@@ -12,12 +12,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 
-  /* Lined notebook background - horizontal lines only */
+  /* Lined notebook background */
   background:
     linear-gradient(to bottom, #ddd 1px, transparent 1px) 0 0;
   background-size: 100% 40px;
   background-color: #fffef7;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/paper.png');
+  background-size: cover;
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: multiply;
 }
 
 /* Red margin line */
