@@ -25,3 +25,11 @@ Here's a list of books I've that I've enjoyed:
 * The Sirens of Titan - Kurt Vonnegut
 * Cat’s Cradle - Kurt Vonnegut
 * The Hitchhiker’s Guide to the Galaxy - Douglas Adams
+* Children of Time - Adrian Tchaikovsky
+* Children of Ruin - Adrian Tchaikovsky
+* Nexus - Ramez Naam
+* Crux - Ramez Naam
+* Apex - Ramez Naam
+* Interface - Tony Batton
+* Greenlights - Matthew McConaughey
+* Magesteria - Nicholas Spencer
